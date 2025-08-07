@@ -15,7 +15,7 @@ return {
         style = "#01ffff",
       },
       indent = {
-        enable = true,
+        enable = false,
         priority = 1,
         chars = {
           "│",

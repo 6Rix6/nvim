@@ -1,6 +1,5 @@
 return {
   -- disable default plugins
-  { "lukas-reineke/indent-blankline.nvim", enabled = false },
 
   -- import plugins
   { import = "nvchad.blink.lazyspec" },
@@ -15,6 +14,7 @@ return {
   { import = "plugins.common.smear-cursor" },
   { import = "plugins.common.treesitter-context" },
   { import = "plugins.common.treesj" },
+  { import = "plugins.common.nvim-cursorline" },
 
   -- import local plugins
   (function()
