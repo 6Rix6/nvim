@@ -6,7 +6,7 @@ return   {{
       -- Recipe can be any of 'default', 'minimalist', 'duo', and 'ripple'
       -- Set animate = true to enable animations on any recipe.
       -- See the docs for other config options.
-      recipe = {'default', {animate=false}},
+      recipe = {'default', {animate=true}},
       -- ncmode = 'windows' will fade inactive windows.
       -- ncmode = 'focus' will only fade after you activate the `:VimadeFocus` command.
       ncmode = 'buffers',
@@ -17,8 +17,8 @@ return   {{
       -- basebg = [23,23,23],
       basebg = '',
       tint = {
-        bg = {rgb={0,0,0}, intensity=0.3}, -- adds 30% black to background
-        fg = {rgb={0,0,255}, intensity=0.3}, -- adds 30% blue to foreground
+        bg = {rgb={0,0,0}, intensity=0.2}, -- adds 30% black to background
+        fg = {rgb={0,0,255}, intensity=0.2}, -- adds 30% blue to foreground
         -- fg = {rgb={120,120,120}, intensity=1}, -- all text will be gray
         -- sp = {rgb={255,0,0}, intensity=0.5}, -- adds 50% red to special characters
         -- you can also use functions for tint or any value part in the tint object
@@ -103,7 +103,7 @@ return   {{
                 -- {'mini', {}},
                 -- {'hlchunk', {}},
                 {'treesitter', {
-                  min_node_size = 2, 
+                  min_node_size = 2,
                   min_size = 1,
                   max_size = 0,
                   -- exclude types either too large and/or mundane
