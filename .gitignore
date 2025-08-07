@@ -1,0 +1,9 @@
+# LazyVim cache
+.luarc.json
+lazy-lock.json
+
+# Plugins' compiled files or cache
+.nvim_lsp/
+
+# For local plugins
+lua/plugins/local
