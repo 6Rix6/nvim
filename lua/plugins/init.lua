@@ -13,6 +13,8 @@ return {
   { import = "plugins.common.lazygit-nvim" },
   { import = "plugins.common.hlchunk-nvim" },
   { import = "plugins.common.smear-cursor" },
+  { import = "plugins.common.treesitter-context" },
+  { import = "plugins.common.treesj" },
 
   -- import local plugins
   (function()
