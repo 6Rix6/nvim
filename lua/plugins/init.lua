@@ -15,6 +15,7 @@ return {
   { import = "plugins.common.treesitter-context" },
   { import = "plugins.common.treesj" },
   { import = "plugins.common.nvim-cursorline" },
+  { import = "plugins.common.flash-nvim" },
 
   -- import local plugins
   (function()
