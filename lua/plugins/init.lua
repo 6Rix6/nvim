@@ -16,6 +16,7 @@ return {
   { import = "plugins.common.treesj" },
   { import = "plugins.common.nvim-cursorline" },
   { import = "plugins.common.flash-nvim" },
+  { import = "plugins.common.luaSnip" },
 
   -- import local plugins
   (function()

@@ -13,9 +13,7 @@ if vim.fn.has("wsl") == 1 then
     },
     cache_enabled = 0,
   }
-end
-
-if vim.fn.has("linux") == 1 then
+elseif vim.fn.has("linux") == 1 then
     vim.g.clipboard = {
     name = 'wl-clipboard',
     copy = {
