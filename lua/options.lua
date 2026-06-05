@@ -13,8 +13,8 @@ if vim.fn.has("wsl") == 1 then
     },
     cache_enabled = 0,
   }
-elseif vim.fn.has("linux") == 1 then
-    vim.g.clipboard = {
+elseif vim.fn.has("linux") == 1 and vim.fn.executable("wl-copy") == 1 then
+  vim.g.clipboard = {
     name = 'wl-clipboard',
     copy = {
       ['+'] = 'wl-copy --type text/plain',
@@ -30,5 +30,5 @@ elseif vim.fn.has("linux") == 1 then
     },
     cache_enabled = true,
   }
-  vim.opt.clipboard = 'unnamedplus' 
+  vim.opt.clipboard = 'unnamedplus'
 end
