@@ -41,3 +41,8 @@ require "autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- load local configs
+local config = require("config")
+
+vim.opt.shell = config.shell

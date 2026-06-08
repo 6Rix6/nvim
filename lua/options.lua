@@ -1,6 +1,10 @@
 require "nvchad.options"
 
-if vim.fn.has("wsl") == 1 then
+local config = require("../config")
+
+if config and config.clipboard then
+  vim.g.clipboard = config.clipboard
+elseif vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = 'WslClipboard',
     copy = {
