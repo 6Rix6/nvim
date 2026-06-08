@@ -5,7 +5,7 @@ return {
   { import = "nvchad.blink.lazyspec" },
   { import = "plugins.common.nvim-tree" },
   { import = "plugins.common.conform-nvim" },
-  { import = "plugins.common.neocodium" },
+  -- { import = "plugins.common.neocodium" },
   { import = "plugins.common.nvim-lspconfig" },
   { import = "plugins.common.nvim-treesitter" },
   { import = "plugins.common.vimade" },
