@@ -19,11 +19,11 @@ cd ~/.config && git clone https://github.com/6Rix6/nvim
 ### ローカル
 `lua/plugins/local`にluaファイルを作成
 
-## config
-端末に依存する設定はlua/config.luaを作成し記述
+## local_options
+端末に依存する設定はlua/local_options.luaを作成し記述
 
 ```lua
-local config = {}
+vim.opt.shell = "/bin/zsh"
 
 local function paste()
   return {
@@ -32,7 +32,7 @@ local function paste()
   }
 end
 
-config.clipboard = {
+vim.g.clipboard = {
   name = 'OSC 52',
   copy = {
     ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
@@ -43,12 +43,5 @@ config.clipboard = {
     ["*"] = paste,
   },
 }
-
-config.shell = "/bin/zsh"
-
-return config
 ```
 
-### 使用可能な設定
-- `config.clipboard`: `vim.g.clipboard`
-- `config.shell`: `vim.opt.shell`

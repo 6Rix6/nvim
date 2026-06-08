@@ -6,7 +6,7 @@ lazy-lock.json
 .nvim_lsp/
 
 # For local params
-lua/config.lua
+lua/local_options.lua
 
 # For local plugins
 lua/plugins/local

@@ -1,10 +1,13 @@
 require "nvchad.options"
 
-local config = require("config")
+vim.opt.number = true
+vim.opt.relativenumber = true
 
-if config and config.clipboard then
-  vim.g.clipboard = config.clipboard
-elseif vim.fn.has("wsl") == 1 then
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = false
+
+
+if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = 'WslClipboard',
     copy = {

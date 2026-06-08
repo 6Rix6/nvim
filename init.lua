@@ -1,12 +1,6 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-
-vim.opt.cursorline = true
-vim.opt.cursorcolumn = false
-
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -37,12 +31,8 @@ dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
 require "autocmds"
+pcall(require, "local_options")
 
 vim.schedule(function()
   require "mappings"
 end)
-
--- load local configs
-local config = require("config")
-
-vim.opt.shell = config.shell
