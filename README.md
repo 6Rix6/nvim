@@ -20,7 +20,7 @@ cd ~/.config && git clone https://github.com/6Rix6/nvim
 `lua/plugins/local`にluaファイルを作成
 
 ## config
-端末に依存する設定はinit.luaと同階層にconfig.luaを作成し記述
+端末に依存する設定はlua/config.luaを作成し記述
 
 ```lua
 local config = {}

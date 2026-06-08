@@ -1,6 +1,6 @@
 require "nvchad.options"
 
-local config = require("../config")
+local config = require("config")
 
 if config and config.clipboard then
   vim.g.clipboard = config.clipboard
