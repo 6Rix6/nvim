@@ -10,9 +10,9 @@ map("i", "jj", "<ESC>", { desc = "Exit insert mode" })
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>", { desc = "Save file" })
 map("t", "<ESC>", [[<C-\><C-n>]], { desc = "Exit terminal mode" })
 map("n", "<leader>tt", ":lua require('base46').toggle_transparency()<CR>", { noremap = true, silent = true, desc = "Toggle Background Transparency" })
+map('n', 'grc', vim.lsp.buf.hover, { desc = 'LSP hover information' })
 
-
--- luasnilp
+-- luasnip
 local ls = require("luasnip")
 
 map({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
