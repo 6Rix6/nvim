@@ -18,6 +18,7 @@ return {
   { import = "plugins.common.flash-nvim" },
   { import = "plugins.common.luaSnip" },
   { import = "plugins.common.auto-save-nvim" },
+  { import = "plugins.common.in-and-out-nvim" },
 
   -- import local plugins
   (function()
