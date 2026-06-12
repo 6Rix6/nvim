@@ -1,4 +1,5 @@
 return {
   "pocco81/auto-save.nvim",
-  event = "VeryLazy"
+  lazy = true,
+  event = { "InsertLeave", "TextChanged" }
 }
