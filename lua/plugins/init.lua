@@ -17,6 +17,7 @@ return {
   { import = "plugins.common.nvim-cursorline" },
   { import = "plugins.common.flash-nvim" },
   { import = "plugins.common.luaSnip" },
+  { import = "plugins.common.auto-save-nvim" },
 
   -- import local plugins
   (function()
