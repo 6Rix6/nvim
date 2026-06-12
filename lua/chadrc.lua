@@ -6,9 +6,9 @@
 local M = {}
 
 M.base46 = {
-  theme = "flouromachine",
+  theme = "monekai",
   theme_toggle = {
-    "one_light", "flouromachine"
+    "one_light", "monekai"
   },
   transparency = true,
 }
