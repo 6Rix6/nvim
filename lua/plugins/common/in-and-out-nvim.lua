@@ -9,5 +9,5 @@ return {
       mode = "i"
     },
   },
-  opts = { additional_targets = { "“", "”" } },
+  opts = { additional_targets = { "“", "”", "`", "<", ">" } },
 }
