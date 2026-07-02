@@ -12,7 +12,6 @@ return {
           left_bottom = "╰",
           right_arrow = ">",
         },
-        use_treesitter = false,
         style = {
           { fg = "#34bfd0" },
           { fg = "#e36d76" },
