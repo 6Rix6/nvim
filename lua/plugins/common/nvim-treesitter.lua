@@ -1,5 +1,7 @@
-return  {
+return {
   "nvim-treesitter/nvim-treesitter",
+  build = ":TSUpdate",
+  event = { "BufNewFile", "BufReadPre" },
   opts = {
     ensure_installed = {
       "vim",
@@ -7,6 +9,8 @@ return  {
       "vimdoc",
       "html",
       "css",
+      "dart",
+      "kotlin"
     },
   },
 }

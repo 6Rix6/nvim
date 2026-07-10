@@ -37,3 +37,15 @@ autocmd("BufDelete", {
     end
   end,
 })
+
+local fold_group = vim.api.nvim_create_augroup("TsFolding", { clear = true })
+
+autocmd("FileType", {
+  group = fold_group,
+  pattern = "*",
+  callback = function()
+    vim.opt_local.foldmethod = "expr"
+    vim.opt_local.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+    vim.opt_local.foldtext = ""
+  end,
+})

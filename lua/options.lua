@@ -6,6 +6,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 
+vim.opt.foldlevel = 99
 
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
