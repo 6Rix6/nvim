@@ -1,0 +1,14 @@
+return {
+  defaults = { lazy = true },
+
+  ui = {
+    icons = {
+      ft = "",
+      lazy = "󰂠 ",
+      loaded = "",
+      not_loaded = "",
+    },
+  },
+
+  change_detection = { notify = false },
+}

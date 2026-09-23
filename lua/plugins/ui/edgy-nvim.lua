@@ -1,0 +1,145 @@
+return {
+  "folke/edgy.nvim",
+  event = "VeryLazy",
+  keys = {
+    {
+      "<C-n>",
+      function()
+        require("edgy").toggle("left")
+      end,
+      desc = "Edgy toggle left edgebar",
+      mode = { "n" }
+    }
+  },
+  opts = {
+    animate = {
+      enabled = false,
+    },
+    close_when_all_hidden = true,
+    left = {
+      {
+        title = "Explorer",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "filesystem"
+        end,
+        size = { height = 0.5 },
+        pinned = true,
+        collapsed = false,
+        open = "Neotree position=right",
+      },
+      {
+        title = "Git Status",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "git_status"
+        end,
+        pinned = true,
+        collapsed = true,
+        open = "Neotree position=left git_status",
+        size = { height = 0.2 },
+      },
+      {
+        title = "Buffers",
+        ft = "neo-tree",
+        filter = function(buf)
+          return vim.b[buf].neo_tree_source == "buffers"
+        end,
+        pinned = true,
+        collapsed = true, -- show window as closed/collapsed on start
+        open = "Neotree position=left buffers",
+        size = { height = 0.2 },
+      },
+      "neo-tree",
+    },
+    right = {
+      {
+        -- title = function()
+        --   local buf_name = vim.api.nvim_buf_get_name(0) or "[No Name]"
+        --   return vim.fn.fnamemodify(buf_name, ":t")
+        -- end,
+        title = "Symbols",
+        ft = "trouble",
+        pinned = true,
+        open = "Trouble symbols toggle focus=false",
+        filter = function(_, win)
+          local trouble = vim.w[win].trouble
+
+          if trouble and trouble.mode == "symbols" then
+            return true
+          end
+
+          return false
+        end,
+      },
+      {
+        title = "Lsp",
+        ft = "trouble",
+        pinned = true,
+        open = "Trouble lsp toggle focus=false",
+        filter = function(_, win)
+          local trouble = vim.w[win].trouble
+
+          if trouble and trouble.mode == "lsp" then
+            return true
+          end
+
+          return false
+        end,
+      },
+    },
+    bottom = {
+      {
+        title = "Terminal",
+        ft = "toggleterm",
+        size = { height = 0.3 },
+        filter = function(_, win)
+          return vim.api.nvim_win_get_config(win).relative == ""
+        end,
+      },
+      {
+        ft = "trouble",
+        title = "Diagnostics",
+        size = { height = 0.3 },
+        filter = function(_, win)
+          local trouble = vim.w[win].trouble
+
+          if trouble and trouble.mode == "diagnostics" then
+            return true
+          end
+
+          return false
+        end,
+      },
+      {
+        ft = "trouble",
+        title = "Quickfix",
+        size = { height = 0.3 },
+        filter = function(_, win)
+          local trouble = vim.w[win].trouble
+
+          if trouble and trouble.mode == "qflist" then
+            return true
+          end
+
+          return false
+        end,
+      },
+      {
+        ft = "trouble",
+        title = "Loclist",
+        size = { height = 0.3 },
+        filter = function(_, win)
+          local trouble = vim.w[win].trouble
+
+          if trouble and trouble.mode == "loclist" then
+            return true
+          end
+
+          return false
+        end,
+      }
+
+    },
+  }
+}
