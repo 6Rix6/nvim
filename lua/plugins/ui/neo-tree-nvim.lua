@@ -11,7 +11,7 @@ return {
   cmd = "Neotree",
   lazy = false,
   opts = {
-    open_files_do_not_replace_types = { "terminal", "Trouble", "qf", "edgy" },
+    open_files_do_not_replace_types = { "terminal", "Trouble", "qf", "edgy", "dap-repl", "dap-view", "dap-view-term", "neotest-summary" },
     filesystem = {
       hijack_netrw_behavior = "open_default",
       filtered_items = {
