@@ -1,6 +1,7 @@
 return {
   -- import plugins
   { import = "plugins.cmp" },
+  { import = "plugins.debug" },
   { import = "plugins.git" },
   { import = "plugins.lsp" },
   { import = "plugins.theme" },
