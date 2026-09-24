@@ -1,10 +1,12 @@
 return {
   "lmantw/themify.nvim",
-  lazy = false,
+  event = "VeryLazy",
   opts = {
     "folke/tokyonight.nvim",
     "wtfox/luna.nvim",
-    "tanvirtin/monokai.nvim"
+    "catppuccin/nvim",
+    "morhetz/gruvbox",
+    "rose-pine/neovim"
   },
-  keys = { { "<leader>th", "<cmd>Themify<cr>", desc = "Theme open themify" } }
+  keys = { { "<leader>th", "<cmd>Themify<cr>", desc = "Theme Open themify" } }
 }

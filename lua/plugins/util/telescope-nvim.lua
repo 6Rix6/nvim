@@ -3,6 +3,7 @@ return {
   version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
+    'nvim-treesitter/nvim-treesitter',
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
   },
   keys = {
@@ -34,9 +35,6 @@ return {
         width = 0.87,
         height = 0.80,
       },
-      mappings = {
-        n = { ["q"] = require("telescope.actions").close },
-      },
     }
-  }
+  },
 }

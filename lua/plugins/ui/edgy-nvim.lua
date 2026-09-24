@@ -54,6 +54,11 @@ return {
     },
     right = {
       {
+        title = "Tests Summary",
+        ft = "neotest-summary",
+        pinned = false
+      },
+      {
         -- title = function()
         --   local buf_name = vim.api.nvim_buf_get_name(0) or "[No Name]"
         --   return vim.fn.fnamemodify(buf_name, ":t")
@@ -138,8 +143,22 @@ return {
 
           return false
         end,
+      },
+      {
+        ft = "dap-view",
+        title = "DAP View",
+        size = { height = 0.3 },
+      },
+      {
+        ft = "dap-repl",
+        title = "DAP REPL",
+        size = { height = 0.3 },
+      },
+      {
+        ft = "dap-view-term",
+        title = "DAP Terminal",
+        size = { height = 0.3 },
       }
-
     },
   }
 }
