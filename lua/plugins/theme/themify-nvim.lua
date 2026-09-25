@@ -1,5 +1,5 @@
 return {
-  "lmantw/themify.nvim",
+  "6Rix6/themify.nvim",
   lazy = false,
   opts = {
     "folke/tokyonight.nvim",
