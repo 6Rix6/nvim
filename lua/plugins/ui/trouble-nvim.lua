@@ -33,9 +33,14 @@ return {
       desc = "Trouble Location List",
     },
     {
+      "<leader>cQ",
+      "<cmd>Trouble quickfix toggle<cr>",
+      desc = "Trouble Quickfix",
+    },
+    {
       "<leader>cq",
       "<cmd>Trouble qflist toggle<cr>",
-      desc = "Trouble Quickfix List",
+      desc = "Trouble Quickfix List (Global)",
     },
   },
 }

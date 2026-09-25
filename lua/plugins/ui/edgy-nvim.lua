@@ -123,6 +123,20 @@ return {
         filter = function(_, win)
           local trouble = vim.w[win].trouble
 
+          if trouble and trouble.mode == "quickfix" then
+            return true
+          end
+
+          return false
+        end,
+      },
+      {
+        ft = "trouble",
+        title = "Quickfix List",
+        size = { height = 0.3 },
+        filter = function(_, win)
+          local trouble = vim.w[win].trouble
+
           if trouble and trouble.mode == "qflist" then
             return true
           end
