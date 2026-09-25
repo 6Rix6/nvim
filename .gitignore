@@ -10,3 +10,5 @@ lua/local_options.lua
 # For local plugins
 lua/plugins/local
 
+# For local snippets
+luasnippets/

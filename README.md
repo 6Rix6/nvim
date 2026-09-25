@@ -20,13 +20,15 @@
 | `lua/plugins/` | プラグインspec (カテゴリ別) |
 | `lua/plugins/local/` | 端末固有のプラグインspec (gitignore) |
 | `lua/local_options.lua` | 端末固有のオプション (gitignore) |
+| `luasnippets/` | LuaSnipの言語別スニペット(gitignore) |
 
 ## Local Settings
 
-端末固有の設定はgit管理から外し、以下のファイルを各端末で作成して記述する。
+端末固有の設定はgit管理から外し、以下のディレクトリ/ファイルを各端末で作成して記述する。
 
 | パス | 用途 |
 | --- | --- |
+| `luasnippets/` | LuaSnipの言語別スニペット |
 | `lua/plugins/local/*.lua` | 端末固有のプラグイン・設定 (lazy.nvimのspec) |
 | `lua/local_options.lua` | 端末固有のオプション |
 
@@ -114,6 +116,24 @@ return {
     opts.adapters = opts.adapters or {}
     table.insert(opts.adapters, require("neotest-python")({ runner = "pytest" }))
   end,
+}
+```
+
+### Snippets
+
+LuaSnipは共通。`luasnippets/`ディレクトリに`{filetype}.lua`を作成することでスニペットを追加可能。
+
+```lua
+-- luasnippets/javascript.lua
+local ls = require("luasnip")
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
+
+return {
+  s("stdin", {
+    t('const inputs = require("fs").readFileSync("/dev/stdin", "utf-8").trim().split("\\n");'),
+  }),
 }
 ```
 
