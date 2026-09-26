@@ -17,3 +17,5 @@ map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "General clear highlights" })
 map("n", "<C-s>", "<cmd>w<CR>", { desc = "General save file" })
 map("n", "<C-c>", "<cmd>%y+<CR>", { desc = "General copy whole file" })
+
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { desc = "LSP Jump definition" })
