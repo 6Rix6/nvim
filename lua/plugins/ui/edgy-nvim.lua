@@ -23,34 +23,11 @@ return {
         filter = function(buf)
           return vim.b[buf].neo_tree_source == "filesystem"
         end,
-        size = { height = 0.5 },
+        size = { height = 0.6 },
         pinned = true,
         collapsed = false,
-        open = "Neotree position=right",
+        open = "Neotree position=left",
       },
-      {
-        title = "Git Status",
-        ft = "neo-tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "git_status"
-        end,
-        pinned = true,
-        collapsed = true,
-        open = "Neotree position=left git_status",
-        size = { height = 0.2 },
-      },
-      {
-        title = "Buffers",
-        ft = "neo-tree",
-        filter = function(buf)
-          return vim.b[buf].neo_tree_source == "buffers"
-        end,
-        pinned = true,
-        collapsed = true, -- show window as closed/collapsed on start
-        open = "Neotree position=left buffers",
-        size = { height = 0.2 },
-      },
-      "neo-tree",
     },
     right = {
       {
