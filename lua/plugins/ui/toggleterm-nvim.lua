@@ -20,7 +20,7 @@ return {
       function()
         require("toggleterm").toggle(1, nil, nil, "horizontal")
       end,
-      desc = "1Toggle horizontal terminal",
+      desc = "Toggle horizontal terminal",
       mode = { "n", "t" }
     },
     {
